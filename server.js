@@ -11,7 +11,7 @@ const { handleImage,handleApiCall } = require('./Controllers/Image');
 const db = knex({
 	client: 'pg',
 	connection: {
-	  host : '127.0.0.1',
+	  host : 'postgresql-triangular-09445',
 	  user : 'postgres',
 	  password : 'abdullah0123',
 	  database : 'smartbrain'
