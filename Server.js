@@ -7,7 +7,7 @@ const { handleRegister } = require('./Controllers/Register');
 const { handleSignin } = require('./Controllers/Signin');
 const { handleProfile } = require('./Controllers/handleProfile');
 const { handleImage,handleApiCall } = require('./Controllers/Image');
-//const { handleApiCall } = require('./Controllers/handleApiCall');
+
 const db = knex({
 	client: 'pg',
 	connection: {
@@ -18,7 +18,7 @@ const db = knex({
 	}
  });
 
-//const PORT = process.env.PORT;
+
 
 const app = express();
 
