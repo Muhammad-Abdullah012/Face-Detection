@@ -30,7 +30,7 @@ app.use(cors());
 
 app.get('/', (req,res) => {
 	db.select('*').from('users').then(data => {
-		res.json(data);	
+		res.json("data");	//This need to be changed!!
 	});
 })
 app.post('/signin' , (req,res) => {
