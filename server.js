@@ -55,10 +55,3 @@ app.post('/imgurl' , (req,res) => {
 
 app.listen(process.env.PORT || 3002);
 
-
-/*
-/signin ---- POST = successful/fail
-/Register ---- POST = new user
-/profile: userId ---- GET = user
-/image ---- PUT = user
-*/ 
