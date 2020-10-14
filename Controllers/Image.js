@@ -4,7 +4,7 @@ const Clarifai = require('clarifai');
 
 const handleApiCall = (req,res) => {
 	const app = new Clarifai.App({
-		apiKey: 'd15d8e828b2f4d38bab2dd3e81df4d1c'
+		apiKey: Process.env.API_KEY
 	});
 	app.models.predict( Clarifai.FACE_DETECT_MODEL, req.body.imgurl)
 	// .then((data) => {
