@@ -23,7 +23,7 @@ const app = express();
 app.use(bodyParser.json());
 
 var corsOptions = {
-	origin: 'https://dashboard.heroku.com/apps/face-detection-app01',
+	origin: 'https://face-detection-app01.herokuapp.com/',
 	optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
