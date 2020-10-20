@@ -31,10 +31,10 @@ const handleRegister = (req,res,db,bcrypt) => {
 					}).catch(err => {res.json("Unable to Register!")});
 				})
 				.then(trx.commit)
-				.then(trx.rollback)
-				.catch(err => {
-					res.json("Error while Registring user!");
-				})
+				.catch(trx.rollback)
+			})
+			.catch(err => {
+				res.json("Error while Registring user!");
 			})	
 		});	
 	});

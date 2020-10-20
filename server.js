@@ -42,7 +42,9 @@ app.get('/', (req,res) => {
 	//res.json("This is working.....!");
 	db.select('*').from('users').then(data => {
 		res.json("data");	//This need to be changed!!
-	});
+	}).catch(error => {
+		res.json("Error while loading users");
+	})
 })
 app.post('/signin' , (req,res) => {
 	handleSignin(req,res,db,bcrypt);
