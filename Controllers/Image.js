@@ -7,17 +7,10 @@ const handleApiCall = (req,res) => {
 		apiKey: Process.env.API_KEY
 	});
 	app.models.predict( Clarifai.FACE_DETECT_MODEL, req.body.imgurl)
-	// .then((data) => {
-	// 	setTimeout(() => {
-	// 		res.json(data);
-
-	// 	}, 500)
-	// })
 	.then(data => {   
 		res.json(data);		//data.outputs[0].data.regions is the array which is actually required by front-end...
 	})
 	.catch(err => {
-		console.log(err);
 		res.status(400).json("Error loading Data!");
 	})
 }
