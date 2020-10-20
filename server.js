@@ -23,8 +23,8 @@ const app = express();
 app.use(bodyParser.json());
 
 var corsOptions = {
-	origin: ['https://face-detection-app01.herokuapp.com'],
-	//"origin": "*",
+	//origin: ['https://face-detection-app01.herokuapp.com'],
+	origin: "*",
 	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 	// "preflightContinue": false,
 	// "optionsSuccessStatus": 204
