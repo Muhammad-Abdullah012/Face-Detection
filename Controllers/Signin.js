@@ -12,8 +12,7 @@ const handleSignin = (req,res,db,bcrypt) => {
 					.then(user => {
 						res.json({
 							id: user[0].id,
-							firstname: user[0].firstname,
-							lastname: user[0].lastname,
+							name: user[0].name,
 							entries: user[0].entries
 						});
 					})
