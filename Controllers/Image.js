@@ -6,7 +6,7 @@ const handleApiCall = (req,res) => {
 	const app = new Clarifai.App({
 		apiKey: process.env.API_KEY
 	});
-	app.models.predict( Clarifai.FACE_DETECT_MODEL, req.body.imgurl)
+	app.models.predict( 'c0c0ac362b03416da06ab3fa36fb58e3', req.body.imgurl)
 	.then(data => {   
 		res.json(data);		//data.outputs[0].data.regions is the array which is actually required by front-end...
 	})
